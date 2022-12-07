@@ -9,17 +9,20 @@ const el = document.getElementById('root');
 const root = ReactDOM.createRoot(el);
 
 // 4) creating a react component
-function App() {
-  let message = 'Hi, there!';
-
-  if (Math.random() > 0.5) message = 'Bye, there!';
-
+function App({ type }) {
   return (
     <>
-      <div>{message}</div>
+      <div style={{ display: 'flex' }} className="apple">
+        <input
+          type={type}
+          maxLength={5}
+          style={{ border: '1px solid blue', marginRight: '10px' }}
+        />
+        <textarea autoFocus spellCheck={true} />
+      </div>
     </>
   );
 }
 
 // 5) telling react to render that component
-root.render(<App />);
+root.render(<App type="text" />);
