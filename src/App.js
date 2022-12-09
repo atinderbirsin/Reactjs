@@ -1,5 +1,8 @@
 import { Banner } from './Banner';
 import { ProfileCard } from './ProfileCard';
+import AlexaImg from './images/alexa.png';
+import CortanaImg from './images/cortana.png';
+import SiriImg from './images/siri.png';
 
 
 function App({ type }) {
@@ -9,19 +12,19 @@ function App({ type }) {
       <div className="flex items-center justify-center h-full gap-10">
         <ProfileCard
           name="Alexa"
-          img="https://upload.wikimedia.org/wikipedia/commons/c/cc/Amazon_Alexa_App_Logo.png"
+          img={AlexaImg}
           twitterHandle="alexa99"
           text='I"ll help you buy stuff on Amazon'
         />
         <ProfileCard
           name="Cortana"
-          img="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Microsoft_Cortana_transparent.svg/1200px-Microsoft_Cortana_transparent.svg.png"
+          img={CortanaImg}
           twitterHandle="cortanat12"
           text="Personal assistant by Microsoft"
         />
         <ProfileCard
           name="Siri"
-          img="https://www.apple.com/v/siri/f/images/meta/siri__fsb5b98qe526_og.png?202205050342"
+          img={SiriImg}
           twitterHandle="siri44"
           text='I don"t get a lot of updates anymore'
         />

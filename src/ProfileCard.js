@@ -1,7 +1,7 @@
 export function ProfileCard({ name, img, twitterHandle, text }) {
   return (
     <div className="border border-slate-500 w-48">
-      <div className="w-48 h-48">
+      <div className="w-48 h-48 border-r border-slate-500">
         <img src={img} className='border-b border-slate-500' alt="logo" />
       </div>
       <div className="p-4">
