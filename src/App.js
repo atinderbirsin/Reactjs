@@ -2,13 +2,17 @@ import { useState } from "react";
 import AnimalShow from "./AnimalShow";
 
 function getRandomAnimal() {
-    const animals = ['cow', 'bird', 'cat', 'gator', 'dog', 'horse'];
+  const animals = ["cow", "bird", "cat", "gator", "dog", "horse"];
 
-    return animals[Math.floor(Math.random() * animals.length)];
+  return animals[Math.floor(Math.random() * animals.length)];
 }
 
 export default function App() {
   const [animals, setAnimals] = useState([]);
+
+  const renderedList = animals.map((animal, index) => (
+    <AnimalShow type={animal} key={index} />
+  ));
 
   function handleClick() {
     setAnimals([...animals, getRandomAnimal()]);
@@ -24,11 +28,7 @@ export default function App() {
       </button>
 
       <div className="flex gap-4 flex-wrap">
-        { animals.map((animal, i) => {
-            return (
-                <AnimalShow type={animal} key={i}/>
-            )
-        }) }
+        {renderedList}
       </div>
     </div>
   );
