@@ -15,7 +15,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="flex items-center justify-center flex-col gap-4 mt-4 px-10">
       <button
         onClick={handleClick}
         className="p-3 border border-slate-400 bg-blue-400 rounded-md active:translate-y-1 transition duration-100 text-white"
@@ -23,11 +23,13 @@ export default function App() {
         Add Animal
       </button>
 
+      <div className="flex gap-4 flex-wrap">
         { animals.map((animal, i) => {
             return (
                 <AnimalShow type={animal} key={i}/>
             )
         }) }
+      </div>
     </div>
   );
 }
